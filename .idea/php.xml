@@ -138,11 +138,30 @@
       <path value="$PROJECT_DIR$/blog/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/blog/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/blog/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/blog/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/blog/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/blog/vendor/laravel/fortify" />
+      <path value="$PROJECT_DIR$/blog/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/blog/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/blog/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/blog/vendor/laravel/jetstream" />
+      <path value="$PROJECT_DIR$/blog/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/blog/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/blog/vendor/spatie/error-solutions" />
+      <path value="$PROJECT_DIR$/blog/vendor/spatie/backtrace" />
+      <path value="$PROJECT_DIR$/blog/vendor/spatie/ignition" />
+      <path value="$PROJECT_DIR$/blog/vendor/spatie/flare-client-php" />
+      <path value="$PROJECT_DIR$/blog/vendor/spatie/laravel-ignition" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/blog/phpunit.xml" custom_loader_path="$PROJECT_DIR$/blog/vendor/autoload.php" paratest_path="$PROJECT_DIR$/blog/vendor/bin/paratest_for_phpstorm" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />
