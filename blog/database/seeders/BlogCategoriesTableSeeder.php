@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
+
 class BlogCategoriesTableSeeder extends Seeder
 {
     /**
@@ -28,12 +29,11 @@ class BlogCategoriesTableSeeder extends Seeder
             $parentId = ($i > 4) ? rand(1, 4) : 1;
 
             $categories[] = [
-                'title'     => $cName,
-                'slug'      => Str::slug($cName),
-                'parent_id' => $parentId,
+            'title'     => $cName,
+            'slug'      => Str::slug($cName),
+            'parent_id' => $parentId,
             ];
         }
 
-        DB::table('blog_categories')->insert($categories);
-    }
+        DB::table('blog_categories')->insert($categories);          }
 }
