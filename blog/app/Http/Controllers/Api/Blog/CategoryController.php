@@ -50,7 +50,7 @@ class CategoryController extends Controller
             ], 500);
         }
     }
-
+//nuxt
     /**
      * Display the specified resource.
      */
