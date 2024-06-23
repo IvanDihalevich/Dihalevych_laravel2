@@ -7,7 +7,7 @@ use App\Http\Requests\BlogCategoryCreateRequest;
 use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Models\BlogCategory;
 use Illuminate\Http\Request;
-
+//use
 class CategoryController extends Controller
 {
     /**
