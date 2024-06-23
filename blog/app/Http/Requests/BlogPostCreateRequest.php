@@ -30,7 +30,7 @@ class BlogPostCreateRequest extends FormRequest
             'category_id' => 'required|integer|exists:blog_categories,id',
         ];
     }
-
+    
     /**
      * Get the error messages for the defined validation rules.
      *
@@ -44,7 +44,7 @@ class BlogPostCreateRequest extends FormRequest
             'content_raw.min' => 'Мінімальна довжина статті [:min] символів',
         ];
     }
-
+    
     /**
      * Get custom attributes for validator errors.
      *
@@ -57,3 +57,4 @@ class BlogPostCreateRequest extends FormRequest
         ];
     }
 }
+

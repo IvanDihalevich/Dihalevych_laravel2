@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class CoreRepository.
- *
- * Репозиторій для роботи з сутністю.
+ * 
+ * Репозиторій для роботи з сутністю. 
  * Може видавати набори даних.
  * Не може змінювати та створювати сутності.
  */
 abstract class CoreRepository
 {
-    /**
-     * @var Model
+    /** 
+     * @var Model 
      */
     protected $model;
 
@@ -23,14 +23,14 @@ abstract class CoreRepository
     {
         $this->model = app($this->getModelClass()); //app('App\Models\BlogCategory')
     }
-
+    
     /**
-     *  @return mixed
+     *  @return mixed 
      */
     abstract protected function getModelClass();
 
     /**
-     *  @return Model|\Illuminate\Foundation\Application|mixed
+     *  @return Model|\Illuminate\Foundation\Application|mixed 
      */
     protected function startConditions()
     {

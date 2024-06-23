@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+const UNKNOWN_USER = 1;     
 
-class BlogPost extends Model
+class BlogPost extends Model 
 {
     use SoftDeletes;
-    const UNKNOWN_USER = 1;
+
     protected $fillable
         = [
             'title',
@@ -19,11 +20,12 @@ class BlogPost extends Model
             'content_raw',
             'is_published',
             'published_at',
+            'user_id'
         ];
 
     /**
      * Категорія статті
-     *
+     * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function category()
@@ -34,7 +36,7 @@ class BlogPost extends Model
 
     /**
      * Автор статті
-     *
+     * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
@@ -42,7 +44,6 @@ class BlogPost extends Model
         //стаття належить користувачу
         return $this->belongsTo(User::class);
     }
+
     use HasFactory;
-
-
 }

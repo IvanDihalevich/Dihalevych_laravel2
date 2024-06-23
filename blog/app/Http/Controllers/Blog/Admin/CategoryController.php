@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers\Blog\Admin;
 
-use App\Http\Requests\BlogCategoryCreateRequest;
-use App\Http\Requests\BlogCategoryUpdateRequest;
 //use App\Http\Controllers\Controller;
 //use Illuminate\Http\Request;
 use App\Models\BlogCategory;
 use Illuminate\Support\Str;
+use App\Http\Requests\BlogCategoryUpdateRequest;
+use App\Http\Requests\BlogCategoryCreateRequest;
 use App\Repositories\BlogCategoryRepository;
-
-
 class CategoryController extends BaseController
 {
+    /**
+     * Display a listing of the resource.
+     */
     /**
      * @var BlogCategoryRepository
      */
@@ -23,13 +24,11 @@ class CategoryController extends BaseController
         parent::__construct();
         $this->blogCategoryRepository = app(BlogCategoryRepository::class);
     }
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
+       // dd(__METHOD__);
+       // $paginator = BlogCategory::paginate(5);
         $paginator = $this->blogCategoryRepository->getAllWithPaginate(5);
-
         return view('blog.admin.categories.index', compact('paginator'));
     }
 
@@ -38,11 +37,12 @@ class CategoryController extends BaseController
      */
     public function create()
     {
+        //dd(__METHOD__);
         $item = new BlogCategory();
         $categoryList = $this->blogCategoryRepository->getForComboBox();
 
-
         return view('blog.admin.categories.edit', compact('item', 'categoryList'));
+
     }
 
     /**
@@ -50,6 +50,7 @@ class CategoryController extends BaseController
      */
     public function store(BlogCategoryCreateRequest $request)
     {
+       // dd(__METHOD__);
         $data = $request->input(); //отримаємо масив даних, які надійшли з форми
 
 
@@ -71,7 +72,7 @@ class CategoryController extends BaseController
      */
     public function show(string $id)
     {
-        //
+        dd(__METHOD__);
     }
 
     /**
@@ -93,7 +94,7 @@ class CategoryController extends BaseController
      */
     public function update(BlogCategoryUpdateRequest $request, $id)
     {
-
+       // dd(__METHOD__);
         $item = $this->blogCategoryRepository->getEdit($id);
         if (empty($item)) { //якщо ід не знайдено
             return back() //redirect back
@@ -122,6 +123,6 @@ class CategoryController extends BaseController
      */
     public function destroy(string $id)
     {
-        //
+        dd(__METHOD__);
     }
 }

@@ -6,6 +6,11 @@
       <sourceFolder url="file://$MODULE_DIR$/blog/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/blog/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
       <sourceFolder url="file://$MODULE_DIR$/blog/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/blog/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/blog/tests/Feature" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/blog/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/brianium/paratest" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/carbonphp/carbon-doctrine-types" />
@@ -127,6 +132,20 @@
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/bacon/bacon-qr-code" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/dasprid/enum" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/laravel/fortify" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/laravel/jetstream" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/livewire/livewire" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/mobiledetect/mobiledetectlib" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/paragonie/constant_time_encoding" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/pragmarx/google2fa" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/spatie/backtrace" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/spatie/error-solutions" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/spatie/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/spatie/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/spatie/laravel-ignition" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -23,42 +23,43 @@ class BlogCategoryRepository extends CoreRepository
     {
         return $this->startConditions()->find($id);
     }
-
+    
     /**
      *  Отримати список категорій для виводу в випадаючий список
      *  @return Collection
      */
     public function getForComboBox()
     {
-        //return $this->startConditions()->all();
-        $columns = implode(', ', [
-            'id',
-            'CONCAT (id, ". ", title) AS id_title',  //додаємо поле id_title
-        ]);
+      //  return $this->startConditions()->all();
 
-        //$result = $this->startConditions()->all();
-        /*$result = $this                           //1 варіант
-            ->startConditions()
-            ->select('blog_categories.*',
-                \DB::raw('CONCAT (id, ". ", title) AS id_title'))
-            ->toBase()                              //не робити колекцію(масив) BlogCategory, отримати дані у вигляді класу
-            ->get();*/
+      $columns = implode(', ', [
+        'id',
+        'CONCAT (id, ". ", title) AS id_title',  //додаємо поле id_title 
+    ]);
 
-        $result = $this                           //2 варіант
+    //$result = $this->startConditions()->all();
+    /*$result = $this                           //1 варіант
         ->startConditions()
-            ->selectRaw($columns)
-            ->toBase()
-            ->get();
+        ->select('blog_categories.*',
+            \DB::raw('CONCAT (id, ". ", title) AS id_title'))
+        ->toBase()                              //не робити колекцію(масив) BlogCategory, отримати дані у вигляді класу
+        ->get();*/
 
-        //dd($result);
+    $result = $this                           //2 варіант
+        ->startConditions()
+        ->selectRaw($columns)
+        ->toBase()
+        ->get();
 
-        return $result;
+    //dd($result);
+
+    return $result;
     }
-    /**
+      /**
      * Отримати категорію для виводу пагінатором
-     *
+     * 
      * @param int|null $perPage
-     *
+     * 
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public function getAllWithPaginate($perPage = null)
@@ -70,7 +71,8 @@ class BlogCategoryRepository extends CoreRepository
             ->select($columns)
             ->with(['parentCategory:id,title',])
             ->paginate($perPage); //можна $columns додати сюди
-
+            
         return $result;
     }
+
 }
